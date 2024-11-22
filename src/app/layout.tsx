@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/testing_image.jpg",
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: "Description of the image",
       },
     ],
