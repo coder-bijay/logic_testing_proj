@@ -1,50 +1,19 @@
-import Image from "next/image";
-import Link from "next/link";
+import { TabComponent } from "../common/components/TabComponent";
+import { ModalsComponent } from "../common/modules/ModalsComponent";
+import { SharedLinkPreview } from "../common/modules/SharedLinkPreview";
 
 export default function Home() {
-  const links = [
+  const tabData = [
     {
-      title: "Youtube",
-      url: "www.youtube.com",
-      description: "this is the testing description of youtube",
+      title: "Shared Link Preview",
+      value: "shared_link_preview",
+      component: <SharedLinkPreview />,
     },
     {
-      title: "google",
-      url: "www.google.com",
-      description: "this is the testing description of google",
-    },
-    {
-      title: "facebook",
-      url: "www.facebook.com",
-      description: "this is the testing description of facebook",
+      title: "modals",
+      value: "modals",
+      component: <ModalsComponent />,
     },
   ];
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1> Hello from home</h1>
-
-      <Image
-        src="/assets/testing_image.jpg"
-        alt="abcd"
-        width={200}
-        height={200}
-      />
-      <ol>
-        {links.map((item) => {
-          return (
-            <li key={item.title} className="mb-4 list-decimal">
-              <h1>{item.title}</h1>
-              <h4>{item.description}</h4>
-              <Link
-                href={item.url}
-                className="text-blue-700 font-bold underline"
-              >
-                {item.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ol>
-    </div>
-  );
+  return <TabComponent tabData={tabData} />;
 }
