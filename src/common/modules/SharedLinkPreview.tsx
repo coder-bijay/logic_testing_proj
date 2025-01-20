@@ -37,7 +37,7 @@ export const SharedLinkPreview = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-items-center p-8 pb-20 gap-16 sm:p-20">
+    <div className="flex flex-col items-center justify-items-center gap-16">
       <h1 className="font-bold">
         Note: Add the thumbnail, title, description in shared link of any
         projects.

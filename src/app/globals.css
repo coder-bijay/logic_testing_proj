@@ -19,3 +19,13 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.react-beautiful-dnd-dragging {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.react-beautiful-dnd-dragging > * {
+  pointer-events: auto;
+}

@@ -34,7 +34,7 @@ export const TabComponent = ({ tabData }: { tabData: ITabData[] }) => {
       </div>
 
       {/* Tab Content */}
-      <div className="overflow-y-scroll h-[94vh]">
+      <div className="overflow-y-scroll h-[94vh] p-8">
         {tabData.map(
           (tab) =>
             activeTab === tab.value && (
